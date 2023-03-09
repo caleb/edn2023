@@ -1,3 +1,13 @@
+# 1.1.4 (March 9, 2023)
+
+* Forked to support Ruby 3.2. <https://github.com/edn2023/edn2023> New RubyGem `edn2023`. (@edn2023)
+
+
+# 1.1.2 (January 13, 2020)
+
+* BigDecimal.new() -> BigDecimal() for Ruby 2.7 (BigDecimal 2). (@caleb)
+
+
 # 1.0.2
 * Handle numbers with M precision
 

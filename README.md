@@ -1,17 +1,18 @@
-# edn-ruby
-
-[![Build Status](https://secure.travis-ci.org/relevance/edn-ruby.png)](http://travis-ci.org/relevance/edn-ruby)
-
+# edn2023
 
 &copy; 2012 Relevance Inc
 
-**edn-ruby** is a Ruby library to read and write EDN (extensible data notation), a subset of Clojure used for transferring data between applications, much like JSON, YAML, or XML.
+**edn2023** is a Ruby library to read and write EDN (extensible data notation), a subset of Clojure used for transferring data between applications, much like JSON, YAML, or XML.
 
 ## Installation
 
+If the `edn` gem is installed it should be uninstalled:
+
+    $ gem uninstall edn
+
 Add this line to your application's Gemfile:
 
-    gem 'edn'
+    gem 'edn2023'
 
 And then execute:
 
@@ -19,7 +20,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install edn
+    $ gem install edn2023
 
 
 Note that you might also want to look at [edn_turbo](https://github.com/edporras/edn_turbo)
@@ -31,6 +32,7 @@ with ths gem.
 To read a string of EDN:
 
 ```ruby
+require 'edn'
 EDN.read('[1 2 {:foo "bar"}]')
 ```
 
