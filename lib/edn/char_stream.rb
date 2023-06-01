@@ -19,7 +19,7 @@ module EDN
     end
 
     def digit?(c=current)
-      /[0-9]/ =~ c
+      %w[0 1 2 3 4 5 6 7 8 9].include?(c)
     end
 
     def alpha?(c=current)
@@ -31,11 +31,11 @@ module EDN
     end
 
     def ws?(c=current)
-      /[ \t\r\n,]/ =~ c
+      [" ", "\t", "\r", "\n", ","].include?(c)
     end
 
     def newline?(c=current)
-      /[\n\r]/ =~ c
+      ["\n", "\r"].include?(c)
     end
 
     def repeat(pattern, &block)
