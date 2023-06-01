@@ -3,6 +3,10 @@ require 'set'
 
 module EDN
   class CharStream
+    DIGITS = %w[0 1 2 3 4 5 6 7 8 9]
+    WS = [" ", "\t", "\r", "\n", ","]
+    NEWLINE = ["\n", "\r"]
+    
     def initialize(io=$stdin)
       @io = io
       @current = nil
@@ -19,7 +23,7 @@ module EDN
     end
 
     def digit?(c=current)
-      %w[0 1 2 3 4 5 6 7 8 9].include?(c)
+      DIGITS.include?(c)
     end
 
     def alpha?(c=current)
@@ -31,11 +35,11 @@ module EDN
     end
 
     def ws?(c=current)
-      [" ", "\t", "\r", "\n", ","].include?(c)
+      WS.include?(c)
     end
 
     def newline?(c=current)
-      ["\n", "\r"].include?(c)
+      NEWLINE.include?(c)
     end
 
     def repeat(pattern, &block)
